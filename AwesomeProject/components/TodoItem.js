@@ -1,5 +1,8 @@
 import { Pressable, StyleSheet, Text, View } from 'react-native'
 import React from 'react'
+import CheckboxUnchecked from '../assets/checkbox-unchecked.svg'
+import CheckboxChecked from '../assets/checkbox-checked.svg'
+import DeleteIcon from '../assets/delete.svg'
 
 const TodoItem = () => {
   /*** Pressable의 hitSlop
@@ -20,24 +23,24 @@ const TodoItem = () => {
       <Pressable
         hitSlop={10}
         style={styles.itemCheckbox}
-        onPress={() => dispatch(updateTodo(props.id))}
+        // onPress={() => dispatch(updateTodo(props.id))}
       >
-        {/* {props.state === 'todo' ? (
+        {props.state === 'todo' ? (
           <CheckboxUnchecked />
         ) : (
           <CheckboxChecked style={styles.itemCheckboxCheckedIcon} />
-        )} */}
+        )}
       </Pressable>
-      {/* <Text style={[styles.itemText, props.state === 'done' ? styles.itemTextChecked : '']}>
+      <Text style={[styles.itemText, props.state === 'done' ? styles.itemTextChecked : '']}>
         {props.text}
-      </Text> */}
-      {/* <Pressable
+      </Text>
+      <Pressable
         style={[styles.deleteButton, props.state === 'done' ? styles.deleteButtonDone : '']}
         hitSlop={10}
-        onPress={() => dispatch(deleteTodo(props.id))}
+        // onPress={() => dispatch(deleteTodo(props.id))}
       >
         <DeleteIcon />
-      </Pressable> */}
+      </Pressable>
     </View>
   )
 }
