@@ -1,6 +1,8 @@
 import { SafeAreaView, StyleSheet, Text, TouchableOpacity, View } from 'react-native'
 import React from 'react'
+
 import { StatusBar } from 'expo-status-bar'
+import InputForm from '../components/InputForm'
 
 /** React-Native 기본 컴포넌트
  * View         : 웹개발로 치면 div 태그
@@ -26,6 +28,7 @@ const MainScreen = () => {
       <View style={styles.listView}>
         <Text style={styles.listTitle}>완료된 일</Text>
       </View>
+      <InputForm />
     </SafeAreaView>
   )
 }
